@@ -164,7 +164,7 @@ html{
         text-align: center;
         flex-direction: column;
         width: 100%;
-        transition: 0.3s;
+        transition: 0.4s;
         background-color:#2e1e5b;
     }
     .nav-list li{
@@ -175,3 +175,40 @@ html{
     }
 }
 
+@media (max-width: 500px){
+    .header{
+        height: 180px ;
+    }
+    .logo{
+        margin-top: 2%;
+    }
+    .btn-link{
+        font-size: 14px;
+    }
+    .btn-mobile{
+        margin-left: 320px;
+        position: fixed;
+    }
+    .btn-contato{
+        margin-left: 80px;
+    }
+    .flex{
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .nav-list{
+        top: 180px;
+    }
+}
+@media (max-width:386px){
+    .flex{
+        gap: 2px;
+    }
+    .btn-mobile{
+        margin-right: 10%;
+    }
+    .logo{
+        margin-top: 5%;
+    }
+}
