@@ -28,7 +28,7 @@ html{
 .header{
     position: relative;
     width: 100%;
-    padding-inline: 4px;
+    padding-inline: 15px;
     height: 115px;
     position: fixed;
     background-color:#2e1e5b;
@@ -45,6 +45,7 @@ html{
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+   
 }
 .logo {
      width: 110px; 
@@ -110,6 +111,67 @@ html{
      font-size: 23px;    
      color: #088619;
 }
+.btn-mobile {
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 5px auto; 
+    background-color: #fffffff5;
+    transition: all 0.3s ease-in-out;
+}
 
-
+@media (max-width: 924px) {
+    .header{
+        height: 160px ;
+    }
+    .nav-list{
+        display: none;
+    }
+    .flex{
+        flex-wrap: nowrap;
+        height: 160px;
+        align-items: center;
+        justify-content:space-around;
+    }
+    .btn-contato{
+        margin-right: 80px;
+    }
+    .btn-mobile{
+        display: block;
+        font-size: 30px; 
+    }
+    .btn-mobile.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    .btn-mobile.active .bar:nth-child(1){
+        transform: translateY(9px) rotate(45deg); 
+    }
+    .btn-mobile.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    .nav-list{
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 150px;
+        gap: 3px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        background-color:#2e1e5b;
+    }
+    .nav-list li{
+        margin: 16px 0;
+    }
+    .nav-list.active{
+        left: 0;
+    }
+}
 
